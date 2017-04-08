@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>pom</packaging>
+  <groupId>com.kasisoft.mgnl</groupId>
+  <artifactId>com.kasisoft.mgnl.dependencies</artifactId>
+  <version>5.4.9-SNAPSHOT</version>
+  <name>MGNL :: Magnolia dependencies</name>
+  <url>https://kasisoft.com/bitbucket/projects/MGNL/repos/com.kasisoft.mgnl.dependencies</url>
+  <description>Magnolia related dependencies</description>
+  
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://choosealicense.com/licenses/mit/#</url>
+    </license>
+  </licenses>
+  
+  <organization>
+    <name>Kasisoft</name>
+    <url>https://kasisoft.com</url>
+  </organization>
+  
+  <scm>
+    <url>https://kasisoft.com/bitbucket/projects/MGNL/repos/com.kasisoft.mgnl.dependencies</url>
+    <connection>scm:git:ssh://kasisoft.com:7999/mgnl/com.kasisoft.mgnl.dependencies.git</connection>
+    <developerConnection>scm:git:ssh://kasisoft.com:7999/mgnl/com.kasisoft.mgnl.dependencies.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  
+  <issueManagement>
+    <system>jira</system>
+    <url>https://kasisoft.com/jira/browse/MGNLDEPS</url>
+  </issueManagement>
+  
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://kasisoft.com/jenkins/job/mgnl.com.kasisoft.mgnl.dependencies/</url>
+  </ciManagement>
+  
+  <developers>
+    <developer>
+      <id>costamojan</id>
+      <name>Daniel Kasmeroglu</name>
+      <email>daniel.kasmeroglu@kasisoft.net</email>
+    </developer>
+  </developers>
+  
+  <properties>
+
+    <version-ezmorph>1.0.6</version-ezmorph>
+    <version-freemarker>2.3.23</version-freemarker>
+    <version-jackrabbit-ocm>2.0.0</version-jackrabbit-ocm>
+    <version-json-lib>2.3</version-json-lib>
+    <version-magnolia>5.4.9</version-magnolia>
+    <version-magnolia-cache>5.4.5</version-magnolia-cache>
+    <version-magnolia-categorization>2.4.2</version-magnolia-categorization>
+    <version-magnolia-contacts>1.4.1</version-magnolia-contacts>
+    <version-magnolia-dam>2.1.7</version-magnolia-dam>
+    <version-magnolia-form>2.3.6</version-magnolia-form>
+    <version-magnolia-google-analytics>1.3.2</version-magnolia-google-analytics>
+    <version-magnolia-google-sitemap>2.3.4</version-magnolia-google-sitemap>
+    <version-magnolia-groovy>2.4.6</version-magnolia-groovy>
+    <version-magnolia-jcr>1.0.1</version-magnolia-jcr>
+    <version-magnolia-lang-de>1.0.6</version-magnolia-lang-de>
+    <version-magnolia-light-yaml>1.1</version-magnolia-light-yaml>
+    <version-magnolia-logtools>1.0.3</version-magnolia-logtools>
+    <version-magnolia-mail>5.3</version-magnolia-mail>
+    <version-magnolia-mte>0.12</version-magnolia-mte>
+    <version-magnolia-observation>2.0.5</version-magnolia-observation>
+    <version-magnolia-pages>5.4.8</version-magnolia-pages>
+    <version-magnolia-pur>2.5.2</version-magnolia-pur>
+    <version-magnolia-resources>2.4.7</version-magnolia-resources>
+    <version-magnolia-restclient>1.0.8</version-magnolia-restclient>
+    <version-magnolia-rest>1.1.1</version-magnolia-rest>
+    <version-magnolia-scheduler>2.2.3</version-magnolia-scheduler>
+    <version-magnolia-site>1.0.9</version-magnolia-site>
+    <version-velocity>1.5</version-velocity>
+      
+  </properties>
+ 
+  <dependencyManagement>
+    <dependencies>
+      
+      <dependency>
+        <groupId>info.magnolia.bundle</groupId>
+        <artifactId>magnolia-bundle-parent</artifactId>
+        <version>${version-magnolia}</version>
+        <type>pom</type>
+        <scope>import</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.freemarker</groupId>
+        <artifactId>freemarker</artifactId>
+        <version>${version-freemarker}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-core</artifactId>
+        <version>${version-magnolia}</version>
+        <classifier>tests</classifier>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache</groupId>
+        <artifactId>jackrabbit-ocm</artifactId>
+        <version>${version-jackrabbit-ocm}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.velocity</groupId>
+        <artifactId>velocity</artifactId>
+        <version>${version-velocity}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>net.sf.ezmorph</groupId>
+        <artifactId>ezmorph</artifactId>
+        <version>${version-ezmorph}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-rendering</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-jaas</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.ui</groupId>
+        <artifactId>magnolia-ui-admincentral</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.ui</groupId>
+        <artifactId>magnolia-ui-contentapp</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.security</groupId>
+        <artifactId>magnolia-security-app</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+    
+      <dependency>
+        <groupId>info.magnolia.widgetset</groupId>
+        <artifactId>magnolia-vaadin-widgetset</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.site</groupId>
+        <artifactId>magnolia-site</artifactId>
+        <version>${version-magnolia-site}</version>
+      </dependency>
+    
+      <dependency>
+        <groupId>info.magnolia.site</groupId>
+        <artifactId>magnolia-site-app</artifactId>
+        <version>${version-magnolia-site}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.resources</groupId>
+        <artifactId>magnolia-resources</artifactId>
+        <version>${version-magnolia-resources}</version>
+      </dependency>
+    
+      <dependency>
+        <groupId>info.magnolia.resources</groupId>
+        <artifactId>magnolia-resources-app</artifactId>
+        <version>${version-magnolia-resources}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.pages</groupId>
+        <artifactId>magnolia-pages-editor-widget</artifactId>
+        <version>${version-magnolia-pages}</version>
+      </dependency>
+    
+      <dependency>
+        <groupId>info.magnolia.pages</groupId>
+        <artifactId>magnolia-pages-app</artifactId>
+        <version>${version-magnolia-pages}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.about</groupId>
+        <artifactId>magnolia-about-app</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-api</artifactId>
+        <version>${version-magnolia-dam}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-app</artifactId>
+        <version>${version-magnolia-dam}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-core</artifactId>
+        <version>${version-magnolia-dam}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-imaging</artifactId>
+        <version>${version-magnolia-dam}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-jcr</artifactId>
+        <version>${version-magnolia-dam}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.dam</groupId>
+        <artifactId>magnolia-dam-templating</artifactId>
+        <version>${version-magnolia-dam}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.categorization</groupId>
+        <artifactId>magnolia-categorization</artifactId>
+        <version>${version-magnolia-categorization}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.categorization</groupId>
+        <artifactId>magnolia-categorization-support</artifactId>
+        <version>${version-magnolia-categorization}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.cache</groupId>
+        <artifactId>magnolia-cache-app</artifactId>
+        <version>${version-magnolia-cache}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.cache</groupId>
+        <artifactId>magnolia-cache-browser-app</artifactId>
+        <version>${version-magnolia-cache}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.cache</groupId>
+        <artifactId>magnolia-cache-core</artifactId>
+        <version>${version-magnolia-cache}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.cache</groupId>
+        <artifactId>magnolia-cache-ehcache</artifactId>
+        <version>${version-magnolia-cache}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.contacts</groupId>
+        <artifactId>magnolia-contacts</artifactId>
+        <version>${version-magnolia-contacts}</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>info.magnolia.templating</groupId>
+        <artifactId>magnolia-templating-kit</artifactId>
+        <version>${version-magnolia-mte}</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>info.magnolia.templating</groupId>
+        <artifactId>magnolia-templating-essentials-models</artifactId>
+        <version>${version-magnolia-mte}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.templating</groupId>
+        <artifactId>magnolia-templating-essentials-imaging</artifactId>
+        <version>${version-magnolia-mte}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.restclient</groupId>
+        <artifactId>magnolia-rest-client</artifactId>
+        <version>${version-magnolia-restclient}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.restclient</groupId>
+        <artifactId>magnolia-resteasy-client</artifactId>
+        <version>${version-magnolia-restclient}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.rest</groupId>
+        <artifactId>magnolia-rest-integration</artifactId>
+        <version>${version-magnolia-rest}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson-provider</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.rest</groupId>
+        <artifactId>magnolia-rest-services</artifactId>
+        <version>${version-magnolia-rest}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson-provider</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.rest</groupId>
+        <artifactId>magnolia-rest-tools</artifactId>
+        <version>${version-magnolia-rest}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson-provider</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.jcrtools</groupId>
+        <artifactId>magnolia-jcr-tools</artifactId>
+        <version>${version-magnolia-jcr}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.jcrbrowser</groupId>
+        <artifactId>magnolia-jcr-browser-app</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.log</groupId>
+        <artifactId>magnolia-log-tools</artifactId>
+        <version>${version-magnolia-logtools}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.messages</groupId>
+        <artifactId>magnolia-messages-app</artifactId>
+        <version>${version-magnolia}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-module-form</artifactId>
+        <version>${version-magnolia-form}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-module-google-sitemap</artifactId>
+        <version>${version-magnolia-google-sitemap}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-module-groovy</artifactId>
+        <version>${version-magnolia-groovy}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-module-mail</artifactId>
+        <version>${version-magnolia-mail}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-module-observation</artifactId>
+        <version>${version-magnolia-observation}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-module-google-analytics</artifactId>
+        <version>${version-magnolia-google-analytics}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-module-public-user-registration</artifactId>
+        <version>${version-magnolia-pur}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>net.sf.json-lib</groupId>
+        <artifactId>json-lib</artifactId>
+        <version>${version-json-lib}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia.scheduler</groupId>
+        <artifactId>magnolia-module-scheduler</artifactId>
+        <version>${version-magnolia-scheduler}</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>info.magnolia.lang</groupId>
+        <artifactId>magnolia-lang-de</artifactId>
+        <version>${version-magnolia-lang-de}</version>
+      </dependency>
+  
+      <dependency>
+        <groupId>org.mgnlconfig</groupId>
+        <artifactId>light-yaml</artifactId>
+        <version>${version-magnolia-light-yaml}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>info.magnolia.core</groupId>
+            <artifactId>magnolia-resource-loader</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+  
+  <distributionManagement>
+    <repository>
+      <id>libs-kasisoft</id>
+      <url>https://kasisoft.com/artifactory/libs-kasisoft</url>
+    </repository>
+    <snapshotRepository>
+      <id>libs-kasisoft</id>
+      <url>https://kasisoft.com/artifactory/libs-kasisoft</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  <repositories>
+    <repository>
+      <id>magnolia.public</id>
+      <url>https://nexus.magnolia-cms.com/content/groups/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>vaadin-addons</id>
+      <url>https://maven.vaadin.com/vaadin-addons</url>
+    </repository>
+    <repository>
+      <id>libs-kasisoft</id>
+      <url>https://kasisoft.com/artifactory/libs-kasisoft</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  
+</project>
