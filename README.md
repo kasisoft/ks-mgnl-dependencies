@@ -55,11 +55,8 @@ Dependency
 
      <dependency>
          <groupId>com.kasisoft</groupId>
-         <artifactId>com.kasisoft.mgnl.dependencies</artifactId>
+         <artifactId>ks-mgnl-dependencies</artifactId>
          <version>5.4.9</version> 
-         <!--
-         <version>5.4.9-SNAPSHOT</version>
-         -->
      </dependency>
 
 License

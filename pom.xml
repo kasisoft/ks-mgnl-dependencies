@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
   <packaging>pom</packaging>
   <groupId>com.kasisoft.mgnl</groupId>
-  <artifactId>com.kasisoft.mgnl.dependencies</artifactId>
+  <artifactId>ks-mgnl-dependencies</artifactId>
   <version>5.4.9-SNAPSHOT</version>
   <name>MGNL :: Magnolia dependencies</name>
-  <url>https://kasisoft.com/bitbucket/projects/MGNL/repos/com.kasisoft.mgnl.dependencies</url>
+  <url>https://kasisoft.com/bitbucket/projects/MGNL/repos/ks-mgnl-dependencies</url>
   <description>Magnolia related dependencies</description>
   
   <licenses>
@@ -23,9 +23,9 @@
   </organization>
   
   <scm>
-    <url>https://kasisoft.com/bitbucket/projects/MGNL/repos/com.kasisoft.mgnl.dependencies</url>
-    <connection>scm:git:ssh://kasisoft.com:7999/mgnl/com.kasisoft.mgnl.dependencies.git</connection>
-    <developerConnection>scm:git:ssh://kasisoft.com:7999/mgnl/com.kasisoft.mgnl.dependencies.git</developerConnection>
+    <url>https://kasisoft.com/bitbucket/projects/MGNL/repos/ks-mgnl-dependencies</url>
+    <connection>scm:git:ssh://kasisoft.com:7999/mgnl/ks-mgnl-dependencies.git</connection>
+    <developerConnection>scm:git:ssh://kasisoft.com:7999/mgnl/ks-mgnl-dependencies.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   
@@ -36,7 +36,7 @@
   
   <ciManagement>
     <system>Jenkins</system>
-    <url>https://kasisoft.com/jenkins/job/mgnl.com.kasisoft.mgnl.dependencies/</url>
+    <url>https://kasisoft.com/jenkins/job/mgnl.ks-mgnl-dependencies/</url>
   </ciManagement>
   
   <developers>
