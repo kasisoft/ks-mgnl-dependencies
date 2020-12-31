@@ -10,10 +10,10 @@ Contact
 * daniel.kasmeroglu@kasisoft.net
 
 
-Jira
-====
+Issues
+======
 
-* https://kasisoft.com/jira/projects/MGNLDEPS/issues
+* https://github.com/kasisoft/ks-mgnl-dependencies/issues
 
 
 Usage
@@ -32,22 +32,6 @@ Maven
 I assume that you're familiar with Maven. If not I suggest to visit the following page:
 
 * https://maven.apache.org/
-
-All artifacts (SNAPSHOTS/RELEASES) are being managed within a dedicated repository which is accessible to all.
-Just add the following repository to your pom or settings.xml :
-
-     <repositories>
-         <repository>
-             <id>libs-kasisoft</id>
-             <url>https://kasisoft.com/artifactory/libs-kasisoft</url>
-             <releases>
-                 <enabled>true</enabled>
-             </releases>
-             <snapshots>
-                 <enabled>true</enabled>
-             </snapshots>
-         </repository>
-     </repositories>
 
 
 Dependency
