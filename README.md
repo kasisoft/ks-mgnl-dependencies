@@ -7,7 +7,7 @@ Dependency declarations for Magnolia
 Contact
 =======
 
-* daniel.kasmeroglu@kasisoft.net
+* daniel.kasmeroglu@kasisoft.com
 
 
 Issues
